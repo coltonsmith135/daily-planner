@@ -13,5 +13,5 @@ i learned how to manipulate the dom while saving information as well as pulling 
 
 https://coltonsmith135.github.io/daily-planner/
 
-![password generator screenshot](assets/Screenshot%20(3).png)
+![daily-planner](assets/daily-planner.png)
 
