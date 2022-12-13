@@ -10,3 +10,8 @@ I built the web application for the user to be able to be able to log the daily 
 I feel like when you have a very busy work day it is easy to get lost and forget everything that you have planned for the day.
 
 i learned how to manipulate the dom while saving information as well as pulling the information from the local storage. creating functions that listen for click events and compare past, present, and future times to the real world clock.
+
+https://coltonsmith135.github.io/daily-planner/
+
+![password generator screenshot](assets/Screenshot%20(3).png)
+
