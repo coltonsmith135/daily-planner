@@ -13,5 +13,5 @@ i learned how to manipulate the dom while saving information as well as pulling 
 
 https://coltonsmith135.github.io/daily-planner/
 
-![daily-planner](assets/daily-planner.png)
+![daily-planner](Assets/daily-planner.png)
 
