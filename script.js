@@ -1,7 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-var hour = $('#hour-x');
 var saveBtn = $('saveBtn');
 
 
@@ -19,26 +15,21 @@ $(document).ready(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  // //saveBtn.addEventListener("click", function(event){
-  // event.preventDefault();
-  // var input = {
+  saveBtn.on("click", function (event) {
+    event.preventDefault();
+    $('.description').each(function () {
+      let input = $(this).attr('id').val
 
-  // }
+      localStorage.setItem('value', input)
+    })
+  });
 
- // localStorage.setItem('user', JSON.stringify(input));
-
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
   let currentHour = moment().hour()
-  console.log(currentHour)
-  $('.description').each(function(){
-    console.log(this)
-    let timeHour = parseInt($(this).attr('id')) 
-    console.log(timeHour)
+
+  $('.description').each(function () {
+
+    let timeHour = parseInt($(this).attr('id'))
+
     if (timeHour < currentHour) {
       $(this).addClass('past')
     }
@@ -51,13 +42,14 @@ $(document).ready(function () {
       $(this).addClass('future')
     }
   })
-   
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?                                 
-  
-  // This displays the current date on the top of my webpage using the id "currentDate"
+
+
   var today = dayjs();
   $('#currentDay').text(today.format(`dddd, MMMM D, H:mma`));
-  console.log(today);
-});
+
+})
+  ;
